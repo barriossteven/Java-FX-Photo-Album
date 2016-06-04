@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<SplitPane dividerPositions="0.6789297658862876" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.SearchController">
+  <items>
+      <SplitPane dividerPositions="0.42431761786600497" prefHeight="160.0" prefWidth="282.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="images" prefHeight="398.0" prefWidth="168.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.6186868686868687" orientation="VERTICAL" prefHeight="398.0" prefWidth="229.0">
+                    <items>
+                      <AnchorPane fx:id="imageAnchor" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextField fx:id="imageCaption" layoutX="51.0" layoutY="17.0" prefHeight="67.0" prefWidth="161.0" />
+                              <TextField fx:id="imagedate" layoutX="51.0" layoutY="95.0" prefHeight="25.0" prefWidth="168.0" />
+                              <Label layoutX="6.0" layoutY="34.0" text="Caption:" />
+                              <Label layoutX="14.0" layoutY="99.0" text="Date:" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <GridPane layoutX="17.0" layoutY="130.0" prefHeight="84.0" prefWidth="128.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btnCreateAlbum" mnemonicParsing="false" onAction="#btnCreateAlbumAction" text="Create Album" />
+                  <Button fx:id="btnReturn" mnemonicParsing="false" onAction="#btnReturnAction" text="Return to Albums" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <TextField fx:id="searchTags" layoutX="76.0" layoutY="225.0" prefHeight="25.0" prefWidth="109.0" />
+            <TextField fx:id="dateStart" layoutX="76.0" layoutY="262.0" prefHeight="25.0" prefWidth="109.0" />
+            <TextField fx:id="dateEnd" layoutX="76.0" layoutY="297.0" prefHeight="25.0" prefWidth="109.0" />
+            <Label layoutX="15.0" layoutY="230.0" text="Tag :" />
+            <Label layoutX="14.0" layoutY="267.0" text="Date Start :" />
+            <Label layoutX="14.0" layoutY="302.0" text="Date End :" />
+            <Button fx:id="btnSearch" layoutX="112.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnSearchAction" text="Search" />
+            <Button layoutX="18.0" layoutY="95.0" mnemonicParsing="false" onAction="#btnDisplayPhotoAction" text="Display" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

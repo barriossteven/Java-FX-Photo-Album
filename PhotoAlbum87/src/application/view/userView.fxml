@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.6508620689655172" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.UserController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="436.0" prefWidth="507.0">
+         <children>
+            <ListView fx:id="table" layoutX="14.0" layoutY="28.0" prefHeight="398.0" prefWidth="413.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="28.0" />
+            <Label alignment="CENTER" layoutX="141.0" prefHeight="17.0" prefWidth="151.0" text="Albums">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="213.0" prefWidth="276.0">
+         <children>
+            <GridPane layoutY="73.0" prefHeight="291.0" prefWidth="240.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Logout" text="Logout" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                  <Button fx:id="btnOpenAlbum" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#btnOpenAlbumAction" text="Open Album" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="btnDeleteAlbum" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#btnDeleteAlbumAction" text="Delete Album" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="btnCreateAlbum" mnemonicParsing="false" onAction="#btnCreateAlbumAction" text="Create Album" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="btnSearch" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#btnSearchAction" text="Search" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>
